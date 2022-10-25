@@ -1,23 +1,34 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Home from '../pages/Home';
+import Login from '../pages/Login';
+import Ready from '../pages/Ready';
+import Success from '../pages/Success';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 
 const publicRoute = [
     {
-        path: '/',
-        component: <Home />,
-        exact: true,
+        path: '/login',
+        component: <Login />,
+        restrict: true,
+    },
+    {
+        path: '/ready',
+        component: <Ready />,
         restrict: true,
     },
 ];
 
 const privateRoute = [
     {
-        path: '/private',
+        path: '/',
         component: <Home />,
-        exact: true,
+        restrict: true,
+    },
+    {
+        path: '/success',
+        component: <Success />,
         restrict: true,
     },
 ];
@@ -26,24 +37,22 @@ const RouterComponent = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route exact element={<PrivateRoute />}>
+                <Route element={<PrivateRoute />}>
                     {privateRoute.map((route) => (
                         <Route
                             key={route.path}
                             path={route.path}
                             element={route.component}
-                            exact={route.exact}
                             restrict={route.restrict}
                         />
                     ))}
                 </Route>
-                <Route exact element={<PublicRoute />}>
+                <Route element={<PublicRoute />}>
                     {publicRoute.map((route) => (
                         <Route
                             key={route.path}
                             path={route.path}
                             element={route.component}
-                            exact={route.exact}
                             restrict={route.restrict}
                         />
                     ))}

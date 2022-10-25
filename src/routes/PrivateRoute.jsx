@@ -1,12 +1,11 @@
+import { useSelector } from 'react-redux';
 import { Outlet, Navigate } from 'react-router-dom';
 
-const PrivateRoute = () => {
-    const isAuth = false;
-    if (process.env.NODE_ENV === 'development') {
-        return <Outlet />;
-    } else {
-        return isAuth ? <Outlet /> : <Navigate to="/login" />;
-    }
+import { authSelector } from '../app/authReducer';
+
+const PrivateRouters = () => {
+    const isAuthenticated = useSelector(authSelector);
+    return isAuthenticated ? <Outlet /> : <Navigate to="/login" replace />;
 };
 
-export default PrivateRoute;
+export default PrivateRouters;
