@@ -3,7 +3,7 @@ import { timeConvert } from '../../utils/timeConvert';
 import * as Styled from './Timer.styled';
 
 const Timer = ({ timeStart }) => {
-    let startOfTime = timeStart || JSON.parse(localStorage.getItem('time_start'));
+    let startOfTime = JSON.parse(localStorage.getItem('time_start')) || timeStart;
     const [time, setTime] = useState(0);
 
     useEffect(() => {
