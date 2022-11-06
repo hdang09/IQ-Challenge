@@ -1,0 +1,135 @@
+{
+    "message": "get only scoreboard",
+    "data": {
+        "users": [
+            {
+                "_id": "635ce38f46da5b039c20894c",
+                "name": "van tho",
+                "studentID": "SE181216",
+                "score": 5,
+                "time": 14057,
+                "rank": 1
+            },
+            {
+                "_id": "635ce38f46da5b039c20894b",
+                "name": "hai dang",
+                "studentID": "SE181217",
+                "score": 2,
+                "time": 78333,
+                "rank": 2
+            },
+            {
+                "_id": "635ce38f46da5b039c20894c",
+                "name": "van tho",
+                "studentID": "SE181216",
+                "score": 5,
+                "time": 14057,
+                "rank": 1
+            },
+            {
+                "_id": "635ce38f46da5b039c20894b",
+                "name": "hai dang",
+                "studentID": "SE181217",
+                "score": 2,
+                "time": 78333,
+                "rank": 2
+            },
+            {
+                "_id": "635ce38f46da5b039c20894c",
+                "name": "van tho",
+                "studentID": "SE181216",
+                "score": 5,
+                "time": 14057,
+                "rank": 1
+            },
+            {
+                "_id": "635ce38f46da5b039c20894b",
+                "name": "hai dang",
+                "studentID": "SE181217",
+                "score": 2,
+                "time": 78333,
+                "rank": 2
+            },
+            {
+                "_id": "635ce38f46da5b039c20894c",
+                "name": "van tho",
+                "studentID": "SE181216",
+                "score": 5,
+                "time": 14057,
+                "rank": 1
+            },
+            {
+                "_id": "635ce38f46da5b039c20894b",
+                "name": "hai dang",
+                "studentID": "SE181217",
+                "score": 2,
+                "time": 78333,
+                "rank": 2
+            },
+            {
+                "_id": "635ce38f46da5b039c20894c",
+                "name": "van tho",
+                "studentID": "SE181216",
+                "score": 5,
+                "time": 14057,
+                "rank": 1
+            },
+            {
+                "_id": "635ce38f46da5b039c20894b",
+                "name": "hai dang",
+                "studentID": "SE181217",
+                "score": 2,
+                "time": 78333,
+                "rank": 2
+            },
+            {
+                "_id": "635ce38f46da5b039c20894c",
+                "name": "van tho",
+                "studentID": "SE181216",
+                "score": 5,
+                "time": 14057,
+                "rank": 1
+            },
+            {
+                "_id": "635ce38f46da5b039c20894b",
+                "name": "hai dang",
+                "studentID": "SE181217",
+                "score": 2,
+                "time": 78333,
+                "rank": 2
+            },
+            {
+                "_id": "635ce38f46da5b039c20894c",
+                "name": "van tho",
+                "studentID": "SE181216",
+                "score": 5,
+                "time": 14057,
+                "rank": 1
+            },
+            {
+                "_id": "635ce38f46da5b039c20894b",
+                "name": "hai dang",
+                "studentID": "SE181217",
+                "score": 2,
+                "time": 78333,
+                "rank": 2
+            },
+            {
+                "_id": "635ce38f46da5b039c20894c",
+                "name": "van tho",
+                "studentID": "SE181216",
+                "score": 5,
+                "time": 14057,
+                "rank": 1
+            },
+            {
+                "_id": "635ce38f46da5b039c20894b",
+                "name": "hai dang",
+                "studentID": "SE181217",
+                "score": 2,
+                "time": 78333,
+                "rank": 2
+            }
+        ]
+    }
+}
