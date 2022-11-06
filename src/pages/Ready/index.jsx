@@ -1,12 +1,15 @@
-import React from 'react';
-import * as Styled from './Ready.styled';
-import { ReactComponent as Logo } from '../../assets/logo.svg';
-import { ReactComponent as Question } from '../../assets/ready.svg';
+import React, { useEffect } from 'react';
 import { BiTimeFive } from 'react-icons/bi';
+import { useNavigate } from 'react-router-dom';
+
+import { BsQuestionCircleFill, BsFillCheckCircleFill } from 'react-icons/bs';
+import * as Styled from './Ready.styled';
+import Logo from '../../assets/logo.svg';
 import Button from '../../components/Button';
-import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { login } from '../../app/authReducer';
+import AnimateSVG from '../../components/AnimateSVG';
+import Question from '../../assets/ready.svg';
+import { resetToken, startTheTest } from '../../utils/productApi';
+import { toast } from 'react-toastify';
 
 const LIST = [
     {
@@ -14,26 +17,36 @@ const LIST = [
         name: "Bạn sẽ có 10' để hoàn thành thử thách",
     },
     {
-        icon: <BiTimeFive />,
+        icon: <BsQuestionCircleFill />,
         name: 'Tổng cộng là 20 câu hỏi cần hoàn thành',
     },
     {
-        icon: <BiTimeFive />,
+        icon: <BsFillCheckCircleFill />,
         name: 'Chỉ chọn một đáp án đúng duy nhất',
     },
 ];
 
 const Ready = () => {
-    const dispatch = useDispatch();
-    const handleClick = () => {
-        dispatch(login());
+    const navigate = useNavigate();
+
+    const startChallenge = async () => {
+        const name = localStorage.getItem('name');
+        const studentID = localStorage.getItem('studentID');
+        try {
+            const token = JSON.parse(localStorage.getItem('token'));
+            const res = await startTheTest(token, name, studentID);
+            navigate('/challenge');
+        } catch (error) {
+            console.log(error);
+            toast.error(error.response.data.message);
+        }
     };
     return (
         <Styled.Wrapper>
-            <Question />
+            <AnimateSVG svg={Question} />
             <Styled.RightContent>
                 <Styled.Header>
-                    <Logo />
+                    <AnimateSVG svg={Logo} />
                     <h2>F-Code</h2>
                 </Styled.Header>
                 <Styled.Title>Chuẩn bị sẵn sàng</Styled.Title>
@@ -45,9 +58,9 @@ const Ready = () => {
                         </Styled.Item>
                     ))}
                 </Styled.List>
-                <Button onClick={handleClick}>
-                    <Link to="/">Bắt đầu thử thách</Link>
-                </Button>
+                <Styled.WrapperButton>
+                    <Button onClick={startChallenge}>Bắt đầu thử thách</Button>
+                </Styled.WrapperButton>
             </Styled.RightContent>
         </Styled.Wrapper>
     );

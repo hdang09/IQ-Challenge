@@ -1,22 +1,5 @@
 import styled from 'styled-components';
-
-export const Header = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    svg {
-        width: 70px;
-        height: 85px;
-    }
-
-    & h2 {
-        font-weight: 800;
-        font-size: 22px;
-        line-height: 22px;
-        color: #374141;
-    }
-`;
+import { between, down } from 'styled-breakpoints';
 
 export const Wrapper = styled.div`
     position: fixed;
@@ -27,6 +10,32 @@ export const Wrapper = styled.div`
     background-color: #fff;
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725),
         0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+
+    ${down('md')} {
+        display: none;
+    }
+
+    ${between('md', 'lg')} {
+        width: 325px;
+    }
+`;
+
+export const Header = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & object {
+        width: 70px;
+        height: 85px;
+    }
+
+    & h2 {
+        font-weight: 800;
+        font-size: 22px;
+        line-height: 22px;
+        color: #374141;
+    }
 `;
 
 export const Item = styled.div`
@@ -43,6 +52,8 @@ export const Item = styled.div`
     & h2,
     & > p {
         text-align: center;
+        margin-bottom: 12px;
+        color: #000;
     }
 
     & > p {
@@ -100,10 +111,16 @@ export const Question = styled.span`
     font-size: 20px;
     line-height: 24px;
     text-align: center;
+    cursor: pointer;
+    color: #bdbdbd;
 
-    /* Primary Green */
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 
-    color: #33bd64;
+    &.active {
+        color: #33bd64;
+    }
 `;
 
 export const DialogWrapper = styled.div`
@@ -136,10 +153,20 @@ export const DialogWrapper = styled.div`
         line-height: 19px;
         color: #7b7b81;
         margin-bottom: 20px;
+
+        span {
+            color: #f9af0b;
+        }
     }
 
     & > div {
         float: right;
+
+        ${down('sm')} {
+            justify-content: space-between;
+            width: 100%;
+            display: flex;
+        }
     }
 
     & > div > button:first-child {
@@ -148,5 +175,9 @@ export const DialogWrapper = styled.div`
         color: #45ce7b;
         background-color: transparent;
         padding: 0 36px;
+
+        ${down('sm')} {
+            padding: 0;
+        }
     }
 `;

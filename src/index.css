@@ -35,8 +35,8 @@ body {
     place-items: center;
     min-width: 320px;
     min-height: 100vh;
-    overflow-x: hidden;
     overflow: overlay;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -94,4 +94,11 @@ button {
 
 a {
     text-decoration: none;
+    color: #45ce7c;
+}
+
+@media only screen and (max-width: 576px) {
+    object {
+        width: inherit;
+    }
 }

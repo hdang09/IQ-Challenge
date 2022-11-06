@@ -1,0 +1,134 @@
+{
+    "_id": "5f789b168dd9930ed7c5c742",
+    "token": "71436d7d56f64a268cd86c055a67a328",
+    "name": "lê đức anh tú",
+    "studentID": "SE160181",
+    "score": 10,
+    "timeStart": 1601779218398,
+    "timeEnd": 1601779543129,
+    "time": 324731,
+    "questions": [
+        {
+            "_id": "5f783a0fb6e155215424923e",
+            "question": "Tìm số (?):  32, 45, 66, 77, ?",
+            "multipleChoice": ["76", "55", "66", "96"],
+            "answer": 4
+        },
+        {
+            "_id": "5f783a0fb6e1552154249244",
+            "question": "Tìm số (?):  100, 81, 64, 49, 36, ?",
+            "multipleChoice": ["23", "25", "29", "33"],
+            "answer": 2
+        },
+        {
+            "_id": "5f783a0fb6e1552154249230",
+            "question": "Một tờ báo giảm giá 90%. Hỏi nó phải tăng bao nhiêu % để lại có giá như cũ?",
+            "multipleChoice": ["90%", "300%", "500", "900%"],
+            "answer": 4
+        },
+        {
+            "_id": "5f783a0fb6e155215424923f",
+            "question": "Tìm số (?):  10, 22, 69, 280, 1405, ?",
+            "multipleChoice": ["8436", "3467", "5456", "9023"],
+            "answer": 1
+        },
+        {
+            "_id": "71",
+            "question": "https://minigame-fcode.s3-ap-southeast-1.amazonaws.com/question71.png",
+            "multipleChoice": ["A", "B", "C", "D"],
+            "answer": 4
+        },
+        {
+            "_id": "94",
+            "question": "https://minigame-fcode.s3-ap-southeast-1.amazonaws.com/question94.png",
+            "multipleChoice": ["A", "B", "C", "D"],
+            "answer": 3
+        },
+        {
+            "_id": "3",
+            "question": "https://minigame-fcode.s3-ap-southeast-1.amazonaws.com/question3.png",
+            "multipleChoice": ["0", "4", "8", "3"],
+            "answer": 1
+        },
+        {
+            "_id": "42",
+            "question": "https://minigame-fcode.s3-ap-southeast-1.amazonaws.com/question42.png",
+            "multipleChoice": ["1", "2", "3", "4"],
+            "answer": 4
+        },
+        {
+            "_id": "5f77dd7e64172518c3b3a3e5",
+            "question": "Số nào khác với các số còn lại: 481220, 851318, 971623, 491312, 471118",
+            "multipleChoice": ["851318", "971623", "491312", "471118"],
+            "answer": 3
+        },
+        {
+            "_id": "5f77dd7e64172518c3b3a3ff",
+            "question": "Tổng của tất cả các số có 3 chữ số mà phần dư là 2 khi chia cho 3 là bao nhiêu?",
+            "multipleChoice": ["897", "164850", "164749", "149700"],
+            "answer": 2
+        },
+        {
+            "_id": "5f783a0fb6e1552154249211",
+            "question": "Một lái xe mua 100 lít xăng với giá 98đ mỗi lít. Mỗi giờ xe tiêu thụ lượng xăng tương đương 70đ. Hỏi với 100 lít đã mua xe chạy được bao nhiêu giờ? ",
+            "multipleChoice": ["120", "140", "260", "322"],
+            "answer": 2
+        },
+        {
+            "_id": "5f783a0fb6e1552154249220",
+            "question": "Nếu x ≥ 8 và y ≤ 3 thì điều nào sau đây chắc chắn đúng?",
+            "multipleChoice": ["x + y ≤ 11", "x – y ≥ 5", "x – y ≤ 5", "x – y ≤ 11"],
+            "answer": 2
+        },
+        {
+            "_id": "5f783a0fb6e155215424920b",
+            "question": "Nếu 5 con mèo có thể bắt 5 con chuột trong 5 phút, cần có bao nhiêu con mèo để bắt được 100 con chuột trong 100 phút? ",
+            "multipleChoice": ["5", "10", "15", "20"],
+            "answer": 1
+        },
+        {
+            "_id": "5f783a0fb6e15521542491fb",
+            "question": "Tìm số còn thiếu trong dãy: 1, 4, 9, 16, ..., 36",
+            "multipleChoice": ["25", "27", "32", "34"],
+            "answer": 1
+        },
+        {
+            "_id": "93",
+            "question": "https://minigame-fcode.s3-ap-southeast-1.amazonaws.com/question93.png",
+            "multipleChoice": ["A", "B", "C", "D"],
+            "answer": 3
+        },
+        {
+            "_id": "51",
+            "question": "https://minigame-fcode.s3-ap-southeast-1.amazonaws.com/question51.png",
+            "multipleChoice": ["A", "B", "C", "D"],
+            "answer": 3
+        },
+        {
+            "_id": "41",
+            "question": "https://minigame-fcode.s3-ap-southeast-1.amazonaws.com/question41.png",
+            "multipleChoice": ["A", "B", "C", "D"],
+            "answer": 2
+        },
+        {
+            "_id": "84",
+            "question": "https://minigame-fcode.s3-ap-southeast-1.amazonaws.com/question84.png",
+            "multipleChoice": ["A", "B", "C", "D"],
+            "answer": 3
+        },
+        {
+            "_id": "5f77dd7e64172518c3b3a40a",
+            "question": "Lan đầu tư 10000 đ vào một quỹ đầu tư đúng 3 năm trước. Giá trị của khoản tiền này tăng 10% trong năm đầu tiên, tăng 5% trong năm thứ hai và giảm 10% trong năm thứ 3. Giá trị của khoản tiền này hiện nay là",
+            "multipleChoice": ["10350 d", "10395 d", "10550 d", "10600 d"],
+            "answer": 2
+        },
+        {
+            "_id": "5f77dd7e64172518c3b3a3c6",
+            "question": "N là một số nguyên tố lớn hơn 5. Biểu thức nào dưới đây cho giá trị là số chẵn?",
+            "multipleChoice": ["(N + 2)^2", "N^2 + 2", "N(N + 2)", "(N + 1)(N + 2)"],
+            "answer": 4
+        }
+    ],
+    "__v": 3,
+    "myAnswers": [4, 2, 4, 1, 4, 3, 1, 4, 3, 2]
+}

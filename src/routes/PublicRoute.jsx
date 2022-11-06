@@ -9,7 +9,7 @@ const PublicRouters = () => {
     //     let { role } = jwtDecode(localStorage.getItem('token')).payload;
     //     return role === '1' ? <Navigate to="/admin" replace /> : <Navigate to="/" replace />;
     // }
-    return isAuthenticated ? <Navigate to="/" replace /> : <Outlet />;
+    return isAuthenticated ? <Navigate to="/login" replace /> : <Outlet />;
 };
 
 export default PublicRouters;

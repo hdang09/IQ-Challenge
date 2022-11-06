@@ -1,15 +1,25 @@
 import styled from 'styled-components';
 import { Header, Title, Description } from '../Login/Login.styled';
+import { down } from 'styled-breakpoints';
 
 export const Wrapper = styled.div`
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
+    ${down('sm')} {
+        flex-direction: column;
+    }
 `;
 
 export const RightContent = styled.div`
     width: 520px;
+    padding: 22px 16px 0;
+
+    ${down('sm')} {
+        width: auto;
+    }
 `;
 
 export const List = styled(Description)`
@@ -61,11 +71,12 @@ export const ResultItem = styled.li`
         flex: 1;
         font-weight: 500;
         font-size: 16px;
+        color: #000;
     }
 
-    & p {
+    & div {
         font-weight: 500;
-        font-size: 24px;
+        font-size: 20px;
         color: #45ce7b;
     }
 `;

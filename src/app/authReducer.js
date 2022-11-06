@@ -11,11 +11,14 @@ const loginSlice = createSlice({
         login: (state) => {
             state.isAuthenticated = true;
         },
-        // signOut: (state) => {
-        //     state.isAuthenticated = false;
-        //     localStorage.removeItem('token');
-        //     localStorage.removeItem('id');
-        // },
+        signOut: (state) => {
+            state.isAuthenticated = false;
+            localStorage.removeItem('token');
+            localStorage.removeItem('time_start');
+            localStorage.removeItem('name');
+            localStorage.removeItem('studentID');
+            localStorage.removeItem('answers');
+        },
     },
 });
 

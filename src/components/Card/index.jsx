@@ -1,46 +1,71 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+import Popup from '../Sidebar/Popup';
 import * as Styled from './Card.styled';
+import { useDispatch } from 'react-redux';
+import { setCurrentQuestion, setUserAnswers } from '../../pages/Challenge/challengeReducer';
+import Timer from '../Timer';
 
-const ANSWERS = [
-    {
-        type: 'A',
-        answer: 'Lựa chọn thứ 1',
-    },
-    {
-        type: 'B',
-        answer: 'Lựa chọn thứ 2',
-    },
-    {
-        type: 'C',
-        answer: 'Lựa chọn thứ 3',
-    },
-    {
-        type: 'D',
-        answer: 'Lựa chọn thứ 4',
-    },
-];
+const Card = ({ data, index, timeStart, isLong, key }) => {
+    const dispatch = useDispatch();
+    const choices = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
+    const [open, setOpen] = useState(false);
+    const answersFromLocal = JSON.parse(localStorage.getItem('answers')) || [];
+    const [reRender, setReRender] = useState(false);
 
-const Card = () => {
+    const handleOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    const changeNextQuestion = () => {
+        dispatch(setCurrentQuestion(index));
+    };
+
+    const handleUserAnswers = (num, ans) => {
+        setReRender(!reRender);
+        dispatch(setUserAnswers({ num, ans }));
+    };
+
+    const showImgOrText = (item, type) => {
+        if (item.startsWith('images/')) {
+            // return <img src={'images/93b885adfe0da089cdf634904fd59f71.png'} />;
+            return <img src={item + '.png'} />;
+        } else if (isLong) {
+            return <p>{item}</p>;
+        } else {
+            return <h1>{item}</h1>;
+        }
+    };
+
+    useEffect(() => {}, [reRender]);
+
     return (
-        <Styled.Wrapper>
+        <Styled.Wrapper key={key}>
             <Styled.Question>
-                <h2>Câu hỏi số 1</h2>
-                <h1>What number should replace the question marks ?</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nisi nunc,
-                    rhoncus ac rutrum in, porta at quam. Nunc ullamcorper euismod lacus, vel
-                    facilisis eros venenatis sit amet. Nullam viverra, lectus eu facilisis
-                    efficitur, libero metus eleifend est, nec gravida orci sapien non erat. Aenean{' '}
-                </p>
+                <Timer timeStart={timeStart} />
+                <h2>Câu hỏi số {++index}</h2>
+                {/* // ! Fake image */}
+                {/* {data.question.startsWith('http') ? <img src={questionImgDemo} /> : <h1>{data.question}</h1>} */}
+                {data.question.map((item) => showImgOrText(item, 'question'))}
             </Styled.Question>
             <Styled.AnswersList>
-                {ANSWERS.map((item) => (
-                    <Styled.AnswersItem key={item.type}>
-                        <span>{item.type}</span>
-                        <p>{item.answer}</p>
+                {data.multipleChoice.map((item, idx) => (
+                    <Styled.AnswersItem
+                        key={item.type}
+                        onClick={() => handleUserAnswers(index, idx + 1)}
+                        className={idx + 1 === answersFromLocal[index - 1] ? 'active' : ''}
+                    >
+                        <span>{choices[idx]}</span>
+                        {showImgOrText(item, 'choice')}
                     </Styled.AnswersItem>
                 ))}
             </Styled.AnswersList>
+            {index === 15 ? <a onClick={handleOpen}>Nộp bài</a> : <a onClick={changeNextQuestion}>Tiếp theo</a>}
+            <Popup open={open} handleClose={handleClose} />
         </Styled.Wrapper>
     );
 };
