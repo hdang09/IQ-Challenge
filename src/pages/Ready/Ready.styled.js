@@ -1,15 +1,25 @@
 import styled from 'styled-components';
-import { Header, Title, Description } from '../Login/Login.styled';
+import { Header, Title, Description, WrapperButton } from '../Login/Login.styled';
+import { down } from 'styled-breakpoints';
 
 export const Wrapper = styled.div`
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
+    ${down('sm')} {
+        flex-direction: column;
+    }
 `;
 
 export const RightContent = styled.div`
     width: 425px;
+
+    ${down('sm')} {
+        width: auto;
+        margin-bottom: 50px;
+    }
 `;
 
 export const List = styled(Description)`
@@ -36,6 +46,12 @@ export const Item = styled.li`
         line-height: 24px;
         color: #7b7b81;
     }
+
+    ${down('sm')} {
+        & p {
+            font-size: 15px;
+        }
+    }
 `;
 
-export { Header, Title };
+export { Header, Title, WrapperButton };

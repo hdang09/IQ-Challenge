@@ -5,7 +5,8 @@ import { authSelector } from '../app/authReducer';
 
 const PrivateRouters = () => {
     const isAuthenticated = useSelector(authSelector);
-    return isAuthenticated ? <Outlet /> : <Navigate to="/login" replace />;
+
+    return isAuthenticated ? <Outlet /> : <Navigate to="/" replace />;
 };
 
 export default PrivateRouters;
